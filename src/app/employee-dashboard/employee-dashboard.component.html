@@ -1,0 +1,89 @@
+<nav class="navbar navbar-light bg-primary">
+    <div class="container-fluid">
+        <h1 style="color:white">Angular CRUD</h1>
+        <div class="d-flex">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn btn-success">
+                Add Employee
+            </button>
+        </div>
+    </div>
+  </nav>
+  
+  
+  <table class="table mt-3">
+    <thead>
+        <tr>
+        <th scope="col">Employee Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Salary</th>
+        <th scope="col">Action</th>
+        
+        
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+        <td>1</td>
+        <td>Ishu</td>
+        <td>ishu@gmail.com</td>
+        <td>1233456789</td>
+        <td>1000000</td>
+        <td>
+            <button class="btn btn-info">Edit</button>
+            <button class="btn btn-danger mx-3">delete</button>
+        </td>
+    </tr>
+  </tbody>
+  </table>
+  
+  
+  
+  
+  
+  
+  
+  
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Add Employee</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formValue">
+          
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Name</label>
+            <input type="Name" formControlName="Name" class="form-control" id="exampleInputPassword1">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email</label>
+            <input type="Name" formControlName="Email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Phone Number</label>
+            <input type="Name" formControlName="Mobile" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Salary</label>
+            <input type="Name" formControlName="Salary" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            
+          </div>
+          
+          
+          
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" (click)="postEmployeeDetails()" class="btn btn-primary">Add</button>
+      </div>
+    </div>
+  </div>
+  </div>
